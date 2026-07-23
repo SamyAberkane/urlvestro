@@ -1,1 +1,222 @@
-<p> bob </p>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vestro — Politique de confidentialité</title>
+<meta name="description" content="Politique de confidentialité de l'application Vestro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F9F5EB;
+    --ink: #1E1A13;
+    --muted: #686357;
+    --border: #D2CDC3;
+    --surface: #FEFBF6;
+    --accent: #906754;
+    --frame: #3F4A38;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Archivo', system-ui, -apple-system, sans-serif;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 24px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .wordmark {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 22px;
+    letter-spacing: 0.3px;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+  }
+
+  h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 30px;
+    line-height: 1.2;
+    color: var(--ink);
+    margin: 0 0 8px;
+  }
+
+  .updated {
+    font-size: 13px;
+    color: var(--muted);
+    margin: 0 0 40px;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--ink);
+    margin: 36px 0 10px;
+  }
+
+  p {
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0 0 12px;
+  }
+
+  ul {
+    margin: 0 0 12px;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 14.5px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+
+  strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  a:hover {
+    border-bottom-color: var(--accent);
+  }
+
+  .contact-card {
+    margin-top: 40px;
+    padding: 20px 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+  }
+
+  .contact-card p {
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .contact-card p + p {
+    margin-top: 4px;
+    color: var(--muted);
+  }
+
+  footer {
+    text-align: center;
+    padding: 28px 24px 40px;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <span class="wordmark">Vestro</span>
+</header>
+
+<main>
+  <h1>Politique de confidentialité</h1>
+  <p class="updated">Dernière mise à jour : juillet 2026</p>
+
+  <p>
+    La présente politique explique quelles données Tailor Apps (« nous »), éditeur de
+    l'application Vestro, collecte lorsque tu utilises l'application, pourquoi, et comment tu
+    peux y accéder ou les supprimer.
+  </p>
+
+  <h2>1. Données que nous collectons</h2>
+  <ul>
+    <li><strong>Compte</strong> : ton identifiant Apple (nom et email si tu choisis de les partager) via
+    « Se connecter avec Apple », utilisé uniquement pour créer et sécuriser ton compte.</li>
+    <li><strong>Dressing</strong> : les photos de vêtements que tu ajoutes, ainsi que les informations que tu
+    renseignes ou que l'application détecte automatiquement (nom, catégorie, couleur, prix).</li>
+    <li><strong>Localisation</strong> : uniquement si tu l'autorises, pour afficher la météo du jour. Ta position
+    est utilisée le temps de la requête et n'est pas conservée sur nos serveurs.</li>
+    <li><strong>Achats</strong> : le statut de ton abonnement Premium (actif ou non), géré par Apple via
+    In-App Purchase — nous ne recevons jamais tes moyens de paiement.</li>
+  </ul>
+
+  <h2>2. Comment tes données sont utilisées</h2>
+  <p>
+    Tes photos de vêtements sont envoyées à l'API Gemini de Google pour être recadrées sur fond
+    blanc et pour en identifier automatiquement la catégorie et la couleur. Tes données de
+    compte et de dressing sont stockées chez Supabase (base de données et stockage de fichiers),
+    avec un accès strictement limité à ton propre compte. Ta position, quand tu l'autorises,
+    est envoyée à Open-Meteo (service météo sans compte ni identifiant) pour obtenir la météo
+    locale, sans être stockée.
+  </p>
+
+  <h2>3. Ce que nous ne faisons pas</h2>
+  <p>
+    Nous ne vendons pas tes données, n'affichons pas de publicité ciblée et n'utilisons pas de
+    traceurs publicitaires tiers.
+  </p>
+
+  <h2>4. Tes droits</h2>
+  <p>
+    Conformément au RGPD, tu disposes d'un droit d'accès, de rectification, d'effacement et de
+    portabilité de tes données. Tu peux supprimer ton compte et toutes les données associées à
+    tout moment depuis l'application (Compte → Supprimer mon compte), ou nous écrire à
+    <a href="mailto:samy.aberkane0@gmail.com">samy.aberkane0@gmail.com</a> pour toute autre demande.
+  </p>
+
+  <h2>5. Conservation des données</h2>
+  <p>
+    Tes données sont conservées tant que ton compte existe. Elles sont supprimées
+    définitivement, ainsi que tes photos, dès que tu supprimes ton compte.
+  </p>
+
+  <h2>6. Contact</h2>
+  <div class="contact-card">
+    <p>Tailor Apps — 59 rue de Ponthieu, 75008 Paris, France</p>
+    <p><a href="mailto:samy.aberkane0@gmail.com">samy.aberkane0@gmail.com</a></p>
+  </div>
+</main>
+
+<footer>
+  © 2026 Tailor Apps — Vestro
+</footer>
+
+</body>
+</html>
